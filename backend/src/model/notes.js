@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+
+//data model or data schema
 const noteSchema = mongoose.Schema({
     id:{
         type: String,
