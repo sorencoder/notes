@@ -14,3 +14,6 @@
 - major UI redesign
 - and many more
 
+
+**_Please note that this project is still in development phase. App usability and functionality will be improve with future updates_**
+
