@@ -19,6 +19,7 @@ class _AddNewNoteState extends State<AddNewNote> {
   TextEditingController titleController = TextEditingController();
   TextEditingController contentController = TextEditingController();
 
+  //add a note
   void addNewNote() {
     if (titleController.text != "") {
       Notes newNote = Notes(
@@ -39,6 +40,7 @@ class _AddNewNoteState extends State<AddNewNote> {
     }
   }
 
+  //update a note
   void updateNote() {
     widget.note!.title = titleController.text;
     widget.note!.content = contentController.text;
