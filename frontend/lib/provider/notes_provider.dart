@@ -8,12 +8,14 @@ class NotesProvider with ChangeNotifier {
   }
   List<Notes> notes = [];
 
+  //add a note to the database & notify the UI
   void addNote(Notes note) {
     notes.add(note);
     notifyListeners();
     ApiService.addNote(note);
   }
 
+  //update a note to the database & notify the UI
   void updateNote(Notes note) {
     int indexofNote =
         notes.indexOf(notes.firstWhere((element) => element.id == note.id));
@@ -22,6 +24,7 @@ class NotesProvider with ChangeNotifier {
     ApiService.addNote(note);
   }
 
+  //delete a note to the database & notify the UI
   void deleteNote(Notes note) {
     int indexofNote =
         notes.indexOf(notes.firstWhere((element) => element.id == note.id));
@@ -30,6 +33,7 @@ class NotesProvider with ChangeNotifier {
     ApiService.deleteNote(note);
   }
 
+  //fetch a note to the database & notify the UI
   void fetchNotes() async {
     notes = await ApiService.fetchNotes("ishwar");
     notifyListeners();
